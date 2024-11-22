@@ -1,0 +1,61 @@
+.card-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.card-wrapper h2 {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.box-inner {
+    display: flex;
+    justify-content: space-between; /* Space between the books */
+    align-items: center;
+    width: 1500px; /* Adjusted width for better spacing */
+    overflow: hidden;
+    background-color: #fff;
+    padding: 1rem; /* Optional padding for inner spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional for aesthetics */
+    border-radius: 8px; /* Optional for rounded corners */
+}
+
+.book {
+    width: 150000px; /* Adjusted for better sizing */
+    height: 500px;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/945546/3433202-d2a1bea8a58cd447.png');
+    background-size: 250px 500px;
+    /* background-color: rgb(217, 123, 36); */
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left center 0px;
+    transform-style: preserve-3d;
+    border-radius: 5px;
+    margin: 0 10px; /* Add spacing between books */
+    overflow: hidden;
+}
+
+.book:hover {
+    transform: rotateY(-28deg) rotateZ(-2deg) scale(1.02);
+    box-shadow: 1px 3px 2px #0371c5, 20px 8px 0 #0376ce;
+}
+
+.dr {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 100px;
+}
+
+.dr-url {
+    display: block;
+}
