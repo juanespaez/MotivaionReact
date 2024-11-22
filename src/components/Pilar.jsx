@@ -1,3 +1,5 @@
+import '/src/components.css/Pilar.css';
+
 const Pilar = () => {
     return (
         <div className="pilar-container">
@@ -17,3 +19,4 @@ const Pilar = () => {
 };
 
 export default Pilar;
+
