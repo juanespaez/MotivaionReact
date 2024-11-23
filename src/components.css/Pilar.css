@@ -5,8 +5,8 @@
     justify-content: space-between;
     align-items: center;
     margin: 2rem auto;
-    padding: 1rem;
-    max-width: 800px;
+    padding: 4rem;
+    max-width: 1500px;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -148,7 +148,7 @@
 
 @keyframes background {
     to {
-        background: #555555a2;
+        background: #555;
         text-shadow: 0 0.1em 0.1em #111;
     }
 }
@@ -157,7 +157,7 @@
 .pilar-image {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
 }
 

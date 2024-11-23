@@ -1,6 +1,7 @@
 import '/src/components.css/Pilar.css';
 import React, { useState } from 'react';
 
+
 const Pilar = () => {
     const words = ['Word1', 'Word2', 'Word3', 'Word4'];
 

@@ -19,7 +19,7 @@
   
     .box {
       width: 0%;
-      height: 620px;
+      height: 650px;
       background: #FFF;
       position: absolute;
       animation: openBox 1s cubic-bezier(.74, .06, .4, .92) forwards;
@@ -27,7 +27,7 @@
       .product__img {
         width: 600px;
         position: absolute;
-        left: -150px;
+        left: -200px;
         top: 50px;
         opacity: 0;
         animation: fadeImg 1s ease-in-out forwards;
