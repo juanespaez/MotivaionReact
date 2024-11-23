@@ -1,0 +1,58 @@
+.fullscreen-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    background-color: #f0f0f0; /* Optional background color */
+}
+
+.recomendations-container {
+    display: flex;
+    flex-direction: column; /* Stack the image and dots vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    width: 100%;
+    height: 100%;
+}
+
+.recomendation {
+    display: flex;
+    flex-direction: column; /* Keep image and dots stacked */
+    align-items: center; /* Center align within container */
+}
+
+.recomendation-image {
+    width: 70vw; /* Cover 70% of the viewport width */
+    max-height: 70vh; /* Cover 70% of the viewport height */
+    object-fit: contain; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.navigation-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem; /* Space between image and dots */
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+
+
