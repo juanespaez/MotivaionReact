@@ -1,24 +1,15 @@
-/* General styles for the container */
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+
 .pilar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 2rem auto;
     padding: 1rem;
-    /* max-height: 200px; */
-    max-width: 1000px;
+    max-width: 800px;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Left-side text styles */
-.pilar-text {
-    flex: 1;
-    margin-right: 1rem;
-    text-align: left;
-    font-family: 'Lora', serif; /* Use a stylish serif font */
-    color: #333;
 }
 
 .pilar-text ul {
@@ -27,13 +18,142 @@
 }
 
 .pilar-text li {
-    font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    line-height: 1.5;
-    color: #444;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-/* Right-side image styles */
+.pilar-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Smooth transitions when changing images */
+.pilar-image img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.border-animation {
+    --border-width: 0.1em;
+    --animation-speed: 0.5s;
+    --color: #333;
+    color: var(--color);
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1em;
+    transform: scale(1, 0.8);
+    border: var(--border-width) solid transparent;
+}
+
+.border-animation__inner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    padding: 0.2em;
+    background: #fff;
+    z-index: 1;
+    border: solid var(--border-width) transparent;
+}
+
+.border-animation:before,
+.border-animation:after {
+    content: '';
+    position: absolute;
+    background: var(--color);
+}
+
+.border-animation:hover:before {
+    animation: beforeBorders var(--animation-speed) forwards ease-in-out;
+}
+
+.border-animation:hover:after {
+    animation: afterBorders var(--animation-speed) forwards ease-in-out;
+}
+
+.border-animation:hover {
+    animation: borderColors var(--animation-speed) steps(1) forwards;
+    outline: none;
+}
+
+.border-animation:hover .border-animation__inner {
+    animation: background calc(var(--animation-speed) / 5 * 3) forwards ease-in-out;
+    animation-delay: calc(var(--animation-speed) / 5 * 2);
+}
+
+/* Keyframes for the animation */
+@keyframes beforeBorders {
+    0% {
+        top: calc(var(--border-width) * -1);
+        left: 50%;
+        bottom: auto;
+        right: auto;
+        width: 0;
+        height: var(--border-width);
+    }
+    33% {
+        top: calc(var(--border-width) * -1);
+        left: calc(var(--border-width) * -1);
+        width: calc(var(--border-width) + 50%);
+        height: var(--border-width);
+    }
+    66% {
+        left: calc(var(--border-width) * -1);
+        height: calc((var(--border-width) * 2) + 100%);
+    }
+    100% {
+        top: auto;
+        bottom: calc(var(--border-width) * -1);
+        width: calc(var(--border-width) + 50%);
+    }
+}
+
+@keyframes afterBorders {
+    0% {
+        top: calc(var(--border-width) * -1);
+        right: 50%;
+        width: 0;
+        height: var(--border-width);
+    }
+    33% {
+        right: calc(var(--border-width) * -1);
+        width: calc(var(--border-width) + 50%);
+    }
+    66% {
+        right: calc(var(--border-width) * -1);
+        height: calc((var(--border-width) * 2) + 100%);
+    }
+    100% {
+        bottom: calc(var(--border-width) * -1);
+        width: calc(var(--border-width) + 50%);
+    }
+}
+
+@keyframes borderColors {
+    0% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: var(--color);
+    }
+}
+
+@keyframes background {
+    to {
+        background: #555555a2;
+        text-shadow: 0 0.1em 0.1em #111;
+    }
+}
+
+/* Image styling */
 .pilar-image {
     flex: 1;
     display: flex;
@@ -48,45 +168,9 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments */
+/* Responsive design */
 @media (max-width: 768px) {
     .pilar-container {
         flex-direction: column;
-        text-align: center;
     }
-
-    .pilar-text {
-        margin: 0 0 1rem 0;
-    }
-
-    .pilar-image {
-        margin-top: 1rem;
-    }
-}
-.hover-link {
-    color: #444;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    position: relative;
-    display: inline-block;
-}
-
-.hover-link:hover {
-    color: #0066cc;
-}
-
-.hover-link::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -3px;
-    left: 0;
-    background-color: #0066cc;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.hover-link:hover::after {
-    transform: scaleX(1);
 }
