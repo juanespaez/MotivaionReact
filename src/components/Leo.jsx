@@ -18,7 +18,7 @@ const Leo =()=>{
             <div class="product__disc">
                 <div class="product__disc--content">
                     <div class="disc__content--about">
-                        <h1>Oculus Rift S</h1>
+                        <h1>Chachy frase</h1>
                         <span>get ready to step into a new world</span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur hic minus nihil
                             obcaecati, ratione repellendus saepe sint tenetur totam ullam. Accusantium aspernatur
@@ -30,8 +30,8 @@ const Leo =()=>{
             </div>
 
             <div class="product_buttons">
-                <button class="btn wishlist">wishlist</button>
-                <button class="btn buy">buy</button>
+                <button class="btn wishlist">Know me more</button>
+                <button class="btn buy">Podcasts</button>
             </div>
         </div>
     </div>
