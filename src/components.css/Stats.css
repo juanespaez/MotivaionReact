@@ -3,7 +3,7 @@
     justify-content: space-between; /* Space between each stat */
     align-items: center; /* Align items vertically to the center */
     width: 100%; /* Adjust the container width as needed */
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    background: linear-gradient(135deg, #6e9ffb, #2c57f2);
     color: #fff;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
