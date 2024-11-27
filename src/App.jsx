@@ -49,7 +49,11 @@ function App() {
 
       <section id="stats" className="stats">
         <h1>The Leo effect</h1>
-        <p>SOEMTHING</p>
+
+        <p>nvekvbdkvdedolvmdk ji ei enivdkj ndfivsilmkdj ovjk
+          cnjdcsdkj ndjn dkjn jn jn jdfn jknd kd ndj 
+        </p>
+        
         <Stats /> 
       </section>
 

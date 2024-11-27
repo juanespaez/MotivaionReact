@@ -1,0 +1,75 @@
+.stats-widget {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Space between each stat */
+    align-items: center; /* Align items vertically to the center */
+    width: 100%; /* Adjust the container width as needed */
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    gap: 20px; /* Space between items */
+}
+
+.stat {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    flex: 1; /* Make all stats equally wide */
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.stat:hover {
+    transform: scale(1.05);
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.stat p {
+    font-size: 1rem;
+    margin: 5px 0 0;
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #6e8efb;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-primary:hover {
+    background: #6e8efb;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .stats-widget {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        gap: 10px; /* Adjust gap for smaller screens */
+    }
+
+    .stat {
+        flex: 1 1 100%; /* Each stat takes full width on smaller screens */
+        max-width: 100%;
+    }
+
+    .stat h3 {
+        font-size: 2rem;
+    }
+
+    .stat p {
+        font-size: 0.9rem;
+    }
+}
