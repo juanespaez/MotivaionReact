@@ -2,13 +2,19 @@ import { useState } from "react";
 import "./App.css";
 import Card from "./components/Card";
 import Pilar from "./components/Pilar";
-import Recomendations  from "./components/Recomendations";
+import Recomendations from "./components/Recomendations";
 import Leo from "./components/Leo";
 import Stats from "./components/Stats";
 
 function App() {
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
   return (
-    <div>
+    <div className={`app ${theme}`}>
       <header className="main-header">
         <nav className="navbar">
           <div className="logo">GrowthPro</div>
@@ -19,6 +25,9 @@ function App() {
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
+        <button onClick={toggleTheme} className="theme-toggle">
+          Switch to {theme === "light" ? "Dark" : "Light"} Theme
+        </button>
       </header>
 
       <section className="hero">
@@ -31,30 +40,29 @@ function App() {
       </section>
 
       <section id="services" className="services">
-      <Card /> 
+        <Card theme={theme} />
       </section>
-        
+
       <section id="pilars" className="pilars">
-      <Pilar />
+        <Pilar theme={theme} />
       </section>
 
       <section id="recomendations" className="recomendations">
-        <Recomendations />
+        <Recomendations theme={theme} />
       </section>
 
       <section id="know-me" className="know-me">
         <h1>FRASE MOTIVACIONAL</h1>
-        <Leo />
+        <Leo theme={theme} />
       </section>
 
       <section id="stats" className="stats">
-        <h1>The Leo effect</h1>
-
-        <p>nvekvbdkvdedolvmdk ji ei enivdkj ndfivsilmkdj ovjk
+        <h1>The Leo Effect</h1>
+        <p>
+          nvekvbdkvdedolvmdk ji ei enivdkj ndfivsilmkdj ovjk
           cnjdcsdkj ndjn dkjn jn jn jdfn jknd kd ndj 
         </p>
-        
-        <Stats /> 
+        <Stats theme={theme} />
       </section>
 
       <section id="about" className="about">

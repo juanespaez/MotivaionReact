@@ -123,3 +123,33 @@ footer {
   padding: 1rem;
 }
 
+.app {
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.app.dark {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+.theme-toggle {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+.theme-toggle:hover {
+  background-color: #0056b3;
+}
